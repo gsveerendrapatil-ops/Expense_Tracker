@@ -1,0 +1,56 @@
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.add-form input,
+.add-form select,
+.add-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  outline: none;
+}
+
+.add-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.add-form input:focus,
+.add-form select:focus,
+.add-form textarea:focus {
+  border-color: #2563eb;
+}
+
+.add-form button {
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 7px;
+}
+
+.add-form button:hover {
+  background: #1d4ed8;
+}
+
+.add-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.add-actions button {
+  flex: 1;
+}
+
+.add-actions .cancel-edit {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.add-actions .cancel-edit:hover {
+  background: #d1d5db;
+}

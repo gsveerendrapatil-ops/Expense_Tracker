@@ -1,0 +1,153 @@
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 245px;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  z-index: 1100;
+  transition: transform 0.25s ease;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.sidebar-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0ea5a8, #087f83);
+  color: #fff;
+  box-shadow: 0 5px 12px rgba(14, 165, 168, 0.25);
+}
+
+.sidebar-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 17px;
+  font-size: 15px;
+  color: #111827;
+}
+
+.sidebar-brand span {
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.sidebar-brand strong {
+  font-size: 16px;
+}
+
+.sidebar-menu-title {
+  padding: 22px 20px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #9ca3af;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 12px;
+}
+
+.sidebar-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 46px;
+  padding: 11px 14px;
+  border-radius: 11px;
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background: #f8fafc;
+  color: #111827;
+  transform: translateX(2px);
+}
+
+.sidebar-link.active {
+  background: #e6f7f7;
+  color: #087f83;
+  font-weight: 650;
+}
+
+.sidebar-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  bottom: 9px;
+  width: 3px;
+  border-radius: 0 5px 5px 0;
+  background: #0ea5a8;
+}
+
+.sidebar-icon {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sidebar-income.active {
+  color: #16a34a;
+  background: #f0fdf4;
+}
+
+.sidebar-income.active::before {
+  background: #16a34a;
+}
+
+.sidebar-income:hover {
+  color: #16a34a;
+  background: #f0fdf4;
+}
+
+.sidebar-expense.active {
+  color: #dc2626;
+  background: #fef2f2;
+}
+
+.sidebar-expense.active::before {
+  background: #dc2626;
+}
+
+.sidebar-expense:hover {
+  color: #dc2626;
+  background: #fef2f2;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .sidebar.sidebar-open {
+    transform: translateX(0);
+  }
+}
